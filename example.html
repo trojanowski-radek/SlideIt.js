@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SlideIt.js demo</title>
+    <!-- SlideIt stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/slideit.css" />
+    <!-- REQUIRES: font-awesome stylesheet-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <!-- SlideIt container where slides are placed inside -->
+    <div id="toslide" class="slideit-container">
+
+        <!-- Slide no. 1 -->
+        <article>
+            <p>1. Pierwszy slide</p>
+        </article>
+
+        <!-- Slide no. 2 -->
+        <article>
+            <p>2. Drugi slide</p>
+        </article>
+
+        <!-- Slide no. 3 -->
+        <article>
+            <p>3. Trzeci slide</p>
+        </article>
+
+    </div>
+
+    <!-- jQuery and slideit.js MUST be included-->
+    <script type="application/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="application/javascript" src="js/slideit.js"></script>
+
+    <script type="application/javascript">
+        $('#toslide').slideit();
+    </script>
+
+</body>
+</html>

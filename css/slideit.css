@@ -1,0 +1,37 @@
+body, html {
+    margin: 0;
+    background: #626262;
+    overflow: hidden;
+}
+
+#toslide > article {
+    height: 66vh; /* 90% of viewport height*/
+    padding: 15px; /* 2x 2% of viewport height*/
+    margin: 15vh;  /* 2x 3% of viewport height*/
+    background: white;
+}
+
+#toslide > article > p {
+    text-align: center;
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 8vh;
+    font-family: 'Lobster', Georgia, Times, serif;
+}
+
+#toslide > i.fa.fa-arrow-circle-up, i.fa.fa-arrow-circle-down {
+    display: block;
+    font-size: 10vh;
+    color: lightslategray;
+    position: fixed;
+    cursor: pointer;
+}
+#toslide > i.fa.fa-arrow-circle-up {
+    top: 3vh;
+    right: 50vw;
+}
+
+#toslide > i.fa.fa-arrow-circle-down {
+    bottom: 3vh;
+    right: 50vw;
+}
