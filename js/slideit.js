@@ -44,13 +44,9 @@ $.fn.slideit = function (direction, delay, disableMouseScrolling) {
     //Reset slide position to 0
     main.attr('slideit-actual-position', 1);
 
-    this.animateArrow = function (arrow) {
-        $(arrow).animate('color', 'white', 500);
-    }
-
     //Add sliders
-    main.prepend('<i id="toslide-up" class="fa fa-arrow-circle-up" onmouseover="$(this).slideit.animatearrow()"></i>').
-        append('<i id="toslide-down" class="fa fa-arrow-circle-down" onmouseover="$(this).slideit.animatearrow()"></i>');
+    main.prepend('<i id="toslide-up" class="fa fa-arrow-circle-up"></i>').
+        append('<i id="toslide-down" class="fa fa-arrow-circle-down"></i>');
 
     //Numerate each article
     $.each(articles, function (index, element) {
@@ -68,10 +64,10 @@ $.fn.slideit = function (direction, delay, disableMouseScrolling) {
     //Handle click on UP
     $up.click(function (e) {
         //Previous element and its position
-        var previous = parseInt(main.attr('slideit-actual-position')) - 1,
-            element  = main.find('article[slideit-slide-number=' + previous + ']');
+        var previous = parseInt(main.attr('slideit-actual-position')) - 1;
         //Scroll only if there is previous slide
         if (previous >= 1) {
+            var element = main.find('article[slideit-slide-number=' + previous + ']');
             //Perform animation regarding margin
             $('html, body').animate({
                 scrollTop: (element.offset().top - element.css('margin-bottom').replace('px', ''))
@@ -90,10 +86,10 @@ $.fn.slideit = function (direction, delay, disableMouseScrolling) {
     //Handle click on DOWN
     $down.click(function (e) {
         //Next element and its position
-        var next    = parseInt(main.attr('slideit-actual-position')) + 1,
-            element = main.find('article[slideit-slide-number=' + next + ']');
+        var next    = parseInt(main.attr('slideit-actual-position')) + 1;
         //Scroll only if there is next slide
         if (next <= articles.length) {
+            var element = main.find('article[slideit-slide-number=' + next + ']');
             //Perform animation regarding margin
             $('html, body').animate({
                 scrollTop: (element.offset().top - element.css('margin-top').replace('px', ''))

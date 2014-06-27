@@ -26,6 +26,11 @@ body, html {
     position: fixed;
     cursor: pointer;
 }
+
+#toslide > i.fa.fa-arrow-circle-up:hover, i.fa.fa-arrow-circle-down:hover {
+    color: #ffffff;
+}
+
 #toslide > i.fa.fa-arrow-circle-up {
     top: 3vh;
     right: 50vw;
